@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+img.verse {
+	-webkit-animation: rock 4s infinite; 
+	animation: rock 4s infinite; 
+	border: 10px dotted blue;
+}
+img.mallet.left {
+	-webkit-animation: dumflip 2s infinite; 
+	animation: dumflip 2s infinite; 
+
+}
+img.mallet.right {
+	-webkit-animation: dum 4s infinite; 
+	animation: dum 2s infinite; 
+
+}
+.container {
+	width: 100%;
+}
+img.mallet {
+	width: 50%;
+	position: absolute;
+	top: 0;
+}
+img.verse {
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+}
+img.mallet.left {
+        -moz-transform: scaleX(-1);
+        -o-transform: scaleX(-1);
+        -webkit-transform: scaleX(-1);
+        transform: scaleX(-1);
+        filter: FlipH;
+        -ms-filter: "FlipH";
+}
+img.mallet.right {
+	right: 0;
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes mymove {
+    0%   {top: 0px;}
+    25%  {top: 200px;}
+    75%  {top: 50px}
+    100% {top: 100px;}
+}
+
+/* Standard syntax */
+@keyframes rock {
+    0%   {transform: rotate(0deg);}
+    25% {transform: rotate(-1deg);}
+    50%  {transform: rotate(0deg);}
+    75%  {transform: rotate(1deg);}
+    100%  {transform: rotate(0deg);}
+}
+
+@keyframes dumflip {
+    0%   {transform: scaleX(-1) rotate(0deg);}
+    50% {transform: scaleX(-1) rotate(-15deg);}
+    60%  {transform: scaleX(-1) rotate(0deg);}
+    85%  {transform: scaleX(-1) rotate(15deg);}
+    100%  {transform: scaleX(-1) rotate(0deg);}
+}
+
+@keyframes dum {
+    0%   {transform: rotate(0deg);}
+    50% {transform: rotate(-15deg);}
+    60%  {transform: rotate(0deg);}
+    80%  {transform: rotate(15deg);}
+    100%  {transform: rotate(0deg);}
+}
+
+</style>
+
+</head>
+<body>
+	<img src="dumdum.PNG" class="verse" />
+	<img src="mallet.png" class="mallet left" />
+	<img src="mallet.png" class="mallet right" />
+</body>
+</html>
